@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.PasswordField?>
+<StackPane prefHeight="400" prefWidth="600" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.aeroportfx.controller.RegisterPageController">
+    <children>
+        <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white;">
+            <Label text="Регистрация" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: black;" />
+            <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" maxWidth="300">
+                <children>
+                    <Label fx:id="nameErrorLabel" layoutX="250" layoutY="20" textFill="red"/>
+                    <TextField fx:id="nameField" promptText="Имя" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 1; -fx-padding: 10;" />
+                    <Label fx:id="surnameErrorLabel" layoutX="250" layoutY="20" textFill="red"/>
+                    <TextField fx:id="surnameField" promptText="Фамилия" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 1; -fx-padding: 10;" />
+                    <Label fx:id="emailErrorLabel" layoutX="250" layoutY="20" textFill="red"/>
+                    <TextField fx:id="emailField" promptText="Email" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 1; -fx-padding: 10;" />
+                    <Label fx:id="passwordErrorLabel" layoutX="250" layoutY="20" textFill="red"/>
+                    <PasswordField fx:id="passwordField" promptText="Пароль" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-width: 1; -fx-padding: 10;" />
+                </children>
+            </VBox>
+            <Button text="OK" onAction="#navigateOkButton" style="-fx-background-radius: 20; -fx-background-color: orange; -fx-text-fill: white; -fx-padding: 10 40;" />
+        </VBox>
+    </children>
+</StackPane>

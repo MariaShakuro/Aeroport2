@@ -1,0 +1,18 @@
+{
+  "ticketNumber" : 8,
+  "passengerName" : "Masha",
+  "passengerSurname" : "Shakuro",
+  "passengerAge" : 4,
+  "ticketPrice" : 34.0,
+  "cityOfRegistration" : "Minsk",
+  "cityOfDestination" : "New Yorl",
+  "seat" : "12A",
+  "carrierFlight" : "AA123",
+  "boardingTime" : [ 2025, 1, 10, 12, 0 ],
+  "departureTime" : [ 2025, 1, 15, 12, 0 ],
+  "gate" : "G15",
+  "terminal" : 2,
+  "classOfSeat" : "A",
+  "bookingCode" : "58f3633ae1c4a0cc6b40b0b690fa3fe55fdfe1fba205f2388153c55fc147f7d9",
+  "baggageIdNumber" : 12345
+}

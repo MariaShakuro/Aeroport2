@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ticket>
+    <passengerName>Masha</passengerName>
+    <passengerSurname>Shakuro</passengerSurname>
+    <passengerAge>4</passengerAge>
+    <ticketPrice>34.0</ticketPrice>
+    <cityOfRegistration>Minsk</cityOfRegistration>
+    <cityOfDestination>New Yorl</cityOfDestination>
+    <carrierFlight>AA123</carrierFlight>
+    <boardingTime>2025-01-10T12:00</boardingTime>
+    <departureTime>2025-01-15T12:00</departureTime>
+    <terminal>2</terminal>
+    <seat>12A</seat>
+    <bookingCode>58f3633ae1c4a0cc6b40b0b690fa3fe55fdfe1fba205f2388153c55fc147f7d9</bookingCode>
+    <baggageIdNumber>12345</baggageIdNumber>
+</ticket>

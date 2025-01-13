@@ -1,0 +1,100 @@
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - libraryspring_app-network
+
+
+  flight_service_application:
+    build:
+      context: ./flight_service_application
+    image: flight_service_application
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/tickets_for_aeroport?createDatabaseIfNotExist=true"
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+    depends_on:
+      - mysql
+    networks:
+      - libraryspring_app-network
+
+  booking_service_application:
+      build:
+        context: ./booking_service_application
+      image: booking_service_application
+      ports:
+        - "8084:8084"
+      environment:
+        SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/tickets_for_aeroport?createDatabaseIfNotExist=true"
+        SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+        SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+        SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+      depends_on:
+        - mysql
+      networks:
+        - libraryspring_app-network
+
+  auth_service_application:
+    build:
+      context: ./auth_service_application
+    image: auth_service_application
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/security_aeroportdb?createDatabaseIfNotExist=true"
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+    depends_on:
+      - mysql
+    networks:
+      - libraryspring_app-network
+
+
+  aeroportfx:
+    build:
+      context: ./aeroportfx
+    image: aeroportfx
+    ports:
+      - "8085:8085"
+   # environment:
+    #  SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/freebookservice"
+    #  SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+     # SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+    #  SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+    #depends_on:
+   #   - mysql
+    networks:
+      - libraryspring_app-network
+
+  ticket_service_application:
+    build:
+      context: ./ticket_service_application
+    image: ticket_service_application
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/tickets_for_aeroport?createDatabaseIfNotExist=true"
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+    depends_on:
+      - mysql
+    networks:
+      - libraryspring_app-network
+volumes:
+  mysql_data:
+
+networks:
+  libraryspring_app-network:
+    driver: bridge

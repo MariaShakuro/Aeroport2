@@ -1,0 +1,8 @@
+spring:
+  application:
+   name: core
+
+server:
+  port: 8081
+
+

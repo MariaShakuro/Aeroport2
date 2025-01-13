@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="core (2)" />
+        <module name="core" />
+        <module name="core (1)" />
+        <module name="core (3)" />
+        <module name="auth_service_application" />
+        <module name="flight_service_application" />
+        <module name="aeroportfx" />
+        <module name="ticket_service_application" />
+      </profile>
+      <profile name="Annotation profile for notification_service_application" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="notification_service_application" />
+      </profile>
+      <profile name="Annotation profile for booking_service_application" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+        </processorPath>
+        <module name="booking_service_application" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aeroportfx" options="-parameters" />
+      <module name="auth_service_application" options="-parameters" />
+      <module name="booking_service_application" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="core (1)" options="-parameters" />
+      <module name="core (2)" options="-parameters" />
+      <module name="core (3)" options="-parameters" />
+      <module name="flight_service_application" options="-parameters" />
+      <module name="notification_service_application" options="-parameters" />
+      <module name="ticket_service_application" options="-parameters" />
+    </option>
+  </component>
+</project>

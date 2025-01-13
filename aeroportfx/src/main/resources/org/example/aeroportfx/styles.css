@@ -1,0 +1,45 @@
+.root {
+    -fx-background-color: grey;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.vbox-ticket {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-background-radius: 20;
+    -fx-border-color: grey;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+}
+
+.label-bold {
+    -fx-font-weight: bold;
+}
+
+.button-purple {
+    -fx-background-color: purple;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+}
+
+.button-transparent {
+    -fx-background-color: transparent;
+    -fx-text-fill: blue;
+}
+
+.check-box-label {
+    -fx-border-color: grey;
+    -fx-border-radius: 10;
+    -fx-padding: 5;
+}
+
+.vbox-left {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-color: grey;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-padding: 20;
+}

@@ -1,0 +1,27 @@
+---
+ticketNumber: 9
+passengerName: "Kirill"
+passengerSurname: "Shakuro"
+passengerAge: 18
+ticketPrice: 136.51
+cityOfRegistration: "Minsk"
+cityOfDestination: "TOkio"
+seat: "15A"
+carrierFlight: "ASD123"
+boardingTime:
+- 2025
+- 1
+- 10
+- 10
+- 0
+departureTime:
+- 2025
+- 1
+- 15
+- 12
+- 0
+gate: "G5"
+terminal: 2
+classOfSeat: "E"
+bookingCode: "58f3633ae1c4a0cc6b40b0b690fa3fe55fdfe1fba205f2388153c55fc147f7d9"
+baggageIdNumber: 12345

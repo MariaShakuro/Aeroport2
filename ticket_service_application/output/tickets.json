@@ -1,0 +1,11 @@
+[ {
+  "ticketNumber" : 1,
+  "passengerName" : "John",
+  "passengerSurname" : "Doe",
+  "passengerAge" : 15,
+  "ticketPrice" : 123.0,
+  "cityOfRegistration" : "New York",
+  "cityOfDestination" : "London",
+  "seat" : "12A",
+  "carrierFlight" : "BA123",
+  "boardingTime"

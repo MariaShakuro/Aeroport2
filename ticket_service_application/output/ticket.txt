@@ -1,0 +1,1 @@
+Ticket{passengerName=MashapassengerSurname=ShakurocityOfRegistration=MinskcityOfDestination=New Yorlseat12AcarrierFlight=AA123boardingTime=2025-01-10T12:00departureTime=2025-01-15T12:00gate=G15terminal=2classOfSeat=AbookingCode=58f3633ae1c4a0cc6b40b0b690fa3fe55fdfe1fba205f2388153c55fc147f7d9baggageNumber=12345}

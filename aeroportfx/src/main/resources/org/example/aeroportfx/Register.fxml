@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="627.0" prefWidth="924.0" spacing="20" style="-fx-background-color: violet;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.aeroportfx.controller.RegisterController">
+    <HBox alignment="CENTER" centerShape="false" prefHeight="35.0" prefWidth="910.0">
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+        <children>
+            <Label prefHeight="18.0" prefWidth="207.0" text="Минский Национальный Аэропорт" />
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+            <Pane prefHeight="35.0" prefWidth="145.0" />
+            <VBox>
+                <VBox fx:id="profileMenu" spacing="10" style="-fx-background-color: transparent; -fx-background-radius: 10;" visible="false">
+                    <Button onAction="#register" style="-fx-background-radius: 20;" text="Регистрация" />
+                    <Button onAction="#login" style="-fx-background-radius: 20;" text="Вход" />
+                </VBox>
+            </VBox>
+        </children>
+    </HBox>
+    <Pane prefHeight="217.0" prefWidth="924.0" />
+    <Label prefHeight="8.0" prefWidth="142.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" text="Найти билеты" />
+    <HBox alignment="CENTER" spacing="10">
+        <GridPane hgap="10" prefHeight="5.0" prefWidth="774.0" vgap="10">
+            <TextField fx:id="fromField" prefHeight="34.0" prefWidth="158.0" promptText="Откуда" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <TextField fx:id="toField" prefHeight="45.0" prefWidth="150.0" promptText="Куда" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.columnIndex="1" />
+            <DatePicker fx:id="datePickerLeft" promptText="Когда" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.columnIndex="2" />
+            <DatePicker fx:id="datePickerRight" promptText="Обратно" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.columnIndex="3" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints maxWidth="141.399951171875" minWidth="42.999957275390614" prefWidth="83.99998779296874" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+        <Button fx:id="searchButton" onAction="#searchButtonAction" prefHeight="47.0" prefWidth="186.0" style="-fx-background-color: orange; -fx-background-radius: 25; -fx-text-fill: white;" text="Найти билеты" />
+    </HBox>
+    <Pane prefHeight="200.0" prefWidth="200.0" />
+</VBox>
